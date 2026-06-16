@@ -9,6 +9,9 @@
     "dev": "pnpm run dev:web",
     "build": "pnpm --filter @gamesung/web build",
     "start": "pnpm --filter @gamesung/web start",
-    "lint": "pnpm --filter @gamesung/web lint"
+    "lint": "pnpm run lint:web",
+    "lint:web": "pnpm --filter @gamesung/web lint",
+    "typecheck": "pnpm run typecheck:web",
+    "typecheck:web": "pnpm --filter @gamesung/web typecheck"
   }
 }

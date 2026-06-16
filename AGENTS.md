@@ -67,6 +67,8 @@ gamesung/
 
 - Verify the frontend builds: `cd packages/web && npx next build`
 - Verify the backend compiles: `cd packages/server && go build ./...`
+- Verify the frontend lints: `pnpm lint:web`
+- Verify the frontend type-checks: `pnpm typecheck:web`
 - Test your changes manually if applicable
 
 ### 6. Pull Request
