@@ -88,7 +88,7 @@ func (g *Game) MakeMove(moveStr string) (string, error) {
 		return "", ErrGameNotPlaying
 	}
 
-	move, err := chess.AlgebraicNotation{}.Decode(g.Board.Position(), moveStr)
+	move, err := chess.UCINotation{}.Decode(g.Board.Position(), moveStr)
 	if err != nil {
 		return "", ErrInvalidMove
 	}
@@ -143,7 +143,7 @@ func (g *Game) GetBotMove() (string, error) {
 		return "", ErrNoValidMoves
 	}
 
-	moveStr := chess.AlgebraicNotation{}.Encode(g.Board.Position(), move)
+	moveStr := chess.UCINotation{}.Encode(g.Board.Position(), move)
 
 	if err := g.Board.Move(move); err != nil {
 		return "", ErrInvalidMove
